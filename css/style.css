@@ -1,0 +1,55 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: lightgray;
+}
+
+.container {
+  background: dodgerblue;
+  border: 4px solid midnightblue;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background: palevioletred;
+  font-weight: bold;
+  text-align: center;
+  border: 6px solid maroon;
+  width: 80px;
+  height: 80px;
+  animation: moveAndRotate 4s infinite alternate;
+}
+
+@keyframes moveAndRotate {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    background: palevioletred;
+  }
+  25% {
+    transform: translate(50px, 0) rotate(90deg);
+    background: lightgreen;
+  }
+  50% {
+    transform: translate(50px, 50px) rotate(180deg);
+    background: gold;
+  }
+  75% {
+    transform: translate(0, 50px) rotate(270deg);
+    background: orange;
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+    background: palevioletred;
+  }
+}
+
+.box:hover {
+  animation-play-state: paused;
+}
